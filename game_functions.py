@@ -28,7 +28,6 @@ def check_keyup_events(event, ship):
 	elif event.key == pygame.K_LEFT:
 		ship.moving_left = False
 	
-
 def check_events(ai_settings, screen, ship, bullets):
 	"""Respond to keypresses and mouse events."""
 	for event in pygame.event.get():
@@ -79,7 +78,6 @@ def create_fleet(ai_settings, screen, ship, aliens):
 			create_alien(ai_settings, screen, aliens, alien_number,
 				row_number)
 		
-
 def get_number_aliens_x(ai_settings, alien_width):
 	"""Determine the number of aliens that fit in a row."""
 	available_space_x = ai_settings.screen_width - 2 * alien_width
@@ -101,3 +99,7 @@ def get_number_rows(ai_settings, ship_height, alien_height):
 							(3 * alien_height) - ship_height)
 	number_rows = int(available_space_y / (2 * alien_height))
 	return number_rows
+
+def update_aliens(aliens):
+	"""Update the positions of all aliens in the fleet."""
+	aliens.update()
