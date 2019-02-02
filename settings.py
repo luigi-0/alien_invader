@@ -10,7 +10,7 @@ class Settings():
 		
 		# Ship settings
 		self.ship_speed_factor = 10.5
-		self.ship_limit = 2
+		self.ship_limit = 1
 
 		# Bullet settings
 		self.bullet_speed_factor = 10
@@ -21,6 +21,6 @@ class Settings():
 
 		# Alien settings
 		self.alien_speed_factor = 100
-		self.fleet_drop_speed = 10
+		self.fleet_drop_speed = 50
 		# fleet_direction of 1 represents right; -1 represents left.
 		self.fleet_direction = 1 
